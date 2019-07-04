@@ -9,7 +9,7 @@ Import-PSSession $exchangeSession -DisableNameChecking
 Get-DistributionGroup
 
 #criar multiplos listas de distribuição com CSV
-$arquivo = Import-Csv “C:\Temp\xxxx.csv” -Delimiter ";"
+$arquivo = Import-Csv “C:\Temp\useraddinglist.csv” -Delimiter ";"
 foreach ($item in $arquivo) {
 
     $name = $item.name
@@ -20,7 +20,7 @@ foreach ($item in $arquivo) {
 }
 
 #adiciona multiplos usuários na lista pelo CSV
-$arquivo = Import-Csv D:\Temp\xxxx.csv -Delimiter ";"
+$arquivo = Import-Csv D:\Temp\useraddinglist.csv -Delimiter ";"
 foreach ($item in $arquivo) {
 
     $grupos = $item.grupos
